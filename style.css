@@ -1,5 +1,5 @@
 :root{
-  --amarillo: 247 202 24;  /* bandera */
+  --amarillo: 247 202 24;
   --azul: 0 56 168;
   --rojo: 206 17 38;
   --bg: 12 18 28;
@@ -20,3 +20,18 @@ html { scroll-behavior: smooth; }
 .view.active { display: block; }
 :focus-visible { outline: 2px dashed rgba(247,202,24,0.8); outline-offset: 2px; }
 .icon-btn { display:inline-flex; align-items:center; gap:.5rem; }
+
+/* NUEVO: Estilos para la animación de scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ocultar la barra de scroll en el carrusel de menú */
+#menuCarousel::-webkit-scrollbar { display: none; }
+#menuCarousel { -ms-overflow-style: none; scrollbar-width: none; }
