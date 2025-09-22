@@ -1,0 +1,13 @@
+/* Contenido de style.css */
+:root{
+  --amarillo: 247 202 24;  /* bandera */
+  --azul: 0 56 168;
+  --rojo: 206 17 38;
+  --bg: 12 18 28;
+  --panel: 18 24 36;
+  --text: 244 247 250;
+}
+body { font-family: 'Manrope', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background: rgb(var(--bg)); color: rgb(var(--text)); }
+html { scroll-behavior: smooth; }
+.brand-grad { background: linear-gradient(135deg, rgba(var(--amarillo),0.9), rgba(var(--azul),0.9) 55%, rgba(var(--rojo),0.9)); }
+/* ... etc., copia todo el resto de tu CSS aquí ... */
