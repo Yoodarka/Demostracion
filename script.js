@@ -164,18 +164,20 @@ const svgdish = (tone='#f7ca18') => `
 `;
 
 // Datos
+// CÓDIGO ACTUALIZADO PARA LA CARTA (PLACEHOLDERS)
 const itemsCarta = [
-  { id:'e1', cat:'Entradas', nombre:'Empanadas de viento', precio:3.5, desc:'Queso y azúcar glas', tone:'#ffd166' },
-  { id:'e2', cat:'Entradas', nombre:'Bolón de verde', precio:4.0, desc:'Chicharrón o queso', tone:'#f6ad55' },
-  { id:'f1', cat:'Fuertes', nombre:'Encebollado', precio:8.5, desc:'Pescado, yuca y cebolla', tone:'#f7ca18' },
-  { id:'f2', cat:'Fuertes', nombre:'Seco de chivo', precio:9.5, desc:'Cerveza y naranjilla', tone:'#f59e0b' },
-  { id:'f3', cat:'Fuertes', nombre:'Hornado', precio:9.0, desc:'Cerdo, mote y llapingacho', tone:'#eab308' },
-  { id:'p1', cat:'Postres', nombre:'Dulce de higos', precio:4.5, desc:'Queso fresco', tone:'#d97706' },
-  { id:'b1', cat:'Bebidas', nombre:'Colada morada', precio:3.0, desc:'Especias y moras', tone:'#8b5cf6' },
-  { id:'b2', cat:'Bebidas', nombre:'Jugo de maracuyá', precio:2.8, desc:'Natural y fresco', tone:'#fde047' },
+  { id:'e1', cat:'Entradas', nombre:'Empanadas de viento', precio:3.5, desc:'Queso y azúcar glas', imagen: 'https://placehold.co/800x600/121828/F7CA24?text=Empanada' },
+  { id:'e2', cat:'Entradas', nombre:'Bolón de verde', precio:4.0, desc:'Chicharrón o queso', imagen: 'https://placehold.co/800x600/121828/F7CA24?text=Bolón' },
+  { id:'f1', cat:'Fuertes', nombre:'Encebollado', precio:8.5, desc:'Pescado, yuca y cebolla', imagen: 'https://placehold.co/800x600/121828/F7CA24?text=Encebollado' },
+  { id:'f2', cat:'Fuertes', nombre:'Seco de chivo', precio:9.5, desc:'Cerveza y naranjilla', imagen: 'https://placehold.co/800x600/121828/F7CA24?text=Seco+de+Chivo' },
+  { id:'f3', cat:'Fuertes', nombre:'Hornado', precio:9.0, desc:'Cerdo, mote y llapingacho', imagen: 'https://placehold.co/800x600/121828/F7CA24?text=Hornado' },
+  { id:'p1', cat:'Postres', nombre:'Dulce de higos', precio:4.5, desc:'Queso fresco', imagen: 'https://placehold.co/800x600/121828/F7CA24?text=Higos+con+Queso' },
+  { id:'b1', cat:'Bebidas', nombre:'Colada morada', precio:3.0, desc:'Especias y moras', imagen: 'https://placehold.co/800x600/121828/F7CA24?text=Colada+Morada' },
+  { id:'b2', cat:'Bebidas', nombre:'Jugo de maracuyá', precio:2.8, desc:'Natural y fresco', imagen: 'https://placehold.co/800x600/121828/F7CA24?text=Jugo' },
 ];
 
 // Render Menú
+// CÓDIGO ACTUALIZADO PARA RENDERIZAR EL MENÚ
 function renderMenu(filtro='Todos'){
   const grid = $('#menuGrid');
   $$('.m-pill').forEach(b=>{
@@ -189,7 +191,9 @@ function renderMenu(filtro='Todos'){
     card.className = 'group rounded-2xl overflow-hidden panel-soft hover:border-white/20 hover:bg-white/10 transition';
     card.innerHTML = `
       <div class="p-4">
-        <div class="rounded-xl overflow-hidden">${svgdish(p.tone)}</div>
+        <div class="rounded-xl overflow-hidden aspect-video">
+          <img src="${p.imagen}" alt="Imagen de marcador para ${p.nombre}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        </div>
         <div class="mt-4 flex items-start justify-between gap-3">
           <div>
             <h3 class="font-bold text-lg">${p.nombre}</h3>
@@ -361,16 +365,18 @@ $('#btnWhatsapp').addEventListener('click', ()=>{
 });
 
 // Galería
+// CÓDIGO ACTUALIZADO PARA LA GALERÍA (PLACEHOLDERS)
 const galleryData = [
-  { id:'g1', tone:'#f7ca18', title:'Encebollado' },
-  { id:'g2', tone:'#f59e0b', title:'Seco de chivo' },
-  { id:'g3', tone:'#8b5cf6', title:'Colada morada' },
-  { id:'g4', tone:'#fde047', title:'Maracuyá fresco' },
-  { id:'g5', tone:'#f6ad55', title:'Bolón de verde' },
-  { id:'g6', tone:'#eab308', title:'Hornado' },
-  { id:'g7', tone:'#d97706', title:'Dulce de higos' },
-  { id:'g8', tone:'#60a5fa', title:'Ceviche tropical' },
+  { id:'g1', imagen: 'https://placehold.co/600x600/121828/F7CA24?text=Plato+Fuerte', title:'Platos fuertes' },
+  { id:'g2', imagen: 'https://placehold.co/600x600/121828/F7CA24?text=Ceviche', title:'Ceviche fresco' },
+  { id:'g3', imagen: 'https://placehold.co/600x600/121828/F7CA24?text=Bebida', title:'Bebidas naturales' },
+  { id:'g4', imagen: 'https://placehold.co/600x600/121828/F7CA24?text=Ambiente', title:'Nuestro ambiente' },
+  { id:'g5', imagen: 'https://placehold.co/600x600/121828/F7CA24?text=Detalles', title:'Cuidamos los detalles' },
+  { id:'g6', imagen: 'https://placehold.co/600x600/121828/F7CA24?text=Postre', title:'Postres caseros' },
+  { id:'g7', imagen: 'https://placehold.co/600x600/121828/F7CA24?text=Ingredientes', title:'Ingredientes de calidad' },
+  { id:'g8', imagen: 'https://placehold.co/600x600/121828/F7CA24?text=Cocina', title:'Nuestra cocina' },
 ];
+// CÓDIGO ACTUALIZADO PARA RENDERIZAR LA GALERÍA
 function renderGallery(){
   const grid = $('#galleryGrid');
   grid.innerHTML = '';
@@ -378,12 +384,14 @@ function renderGallery(){
     const tile = document.createElement('button');
     tile.className = 'group relative rounded-2xl overflow-hidden panel-soft hover:border-white/20';
     tile.innerHTML = `
-      <div class="aspect-square">${svgdish(g.tone)}</div>
-      <div class="absolute inset-x-0 bottom-0 p-3 bg-black/40 backdrop-blur translate-y-2 group-hover:translate-y-0 transition">
-        <p class="font-semibold">${g.title}</p>
+      <div class="aspect-square">
+        <img src="${g.imagen}" alt="Imagen de marcador para ${g.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/80 to-transparent translate-y-2 group-hover:translate-y-0 transition">
+        <p class="font-semibold text-white">${g.title}</p>
       </div>
     `;
-    tile.addEventListener('click', ()=> openModal(svgdish(g.tone).replace('h-32','h-64')));
+    tile.addEventListener('click', ()=> openModal(`<img src="${g.imagen}" alt="${g.title}" class="max-w-full max-h-[80vh] rounded-lg">`));
     grid.appendChild(tile);
   });
 }
@@ -442,3 +450,4 @@ $('#formReserva').addEventListener('submit', (e)=>{
 
 // Poblado inicial de Menú y año
 $('#year').textContent = new Date().getFullYear();
+
