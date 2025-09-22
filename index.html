@@ -11,9 +11,44 @@
 </head>
 <body>
   
-  <!-- ... TODO TU CONTENIDO HTML (header, main, footer, etc.) VA AQUÍ ... -->
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-black/30 border-b border-white/10">
+    <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#experiencia" class="flex items-center gap-3 group">
+        <!-- Logo: Cóndor -->
+        <svg width="36" height="36" viewBox="0 0 64 64" class="text-[rgb(var(--amarillo))] group-hover:scale-110 transition">
+          <g fill="currentColor">
+            <path d="M32 10c6 8 14 10 22 10-7 5-13 8-22 8S17 25 10 20c8 0 16-2 22-10z" />
+            <circle cx="32" cy="28" r="3" fill="rgb(0,56,168)"/>
+            <path d="M12 36c8 6 12 8 20 8s12-2 20-8l-4 10c-6 4-10 6-16 6s-10-2-16-6l-4-10z" />
+          </g>
+        </svg>
+        <span class="font-extrabold tracking-wide text-lg">El Sabor Ecuatoriano</span>
+      </a>
+      <div class="hidden md:flex items-center gap-2">
+        <button data-nav="#experiencia" class="px-4 py-2 rounded-full hover:bg-white/10">Experiencia</button>
+        <button data-nav="#carta" class="px-4 py-2 rounded-full hover:bg-white/10">Carta</button>
+        <a href="#reservas" class="ml-2 bg-[rgb(var(--amarillo))] hover:bg-yellow-300 text-black font-semibold px-4 py-2 rounded-full transition shadow">Reservar</a>
+      </div>
+      <button id="openMenu" class="md:hidden p-2 rounded-full hover:bg-white/10" aria-label="Abrir menú">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      </button>
+    </nav>
+    <!-- Menú móvil -->
+    <div id="menuMobile" class="md:hidden hidden border-t border-white/10 bg-black/40 backdrop-blur">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-2">
+        <button data-nav="#experiencia" class="px-3 py-2 rounded-lg hover:bg-white/10 text-left">Experiencia</button>
+        <button data-nav="#carta" class="px-3 py-2 rounded-lg hover:bg-white/10 text-left">Carta</button>
+        <a href="#reservas" class="px-3 py-2 rounded-lg hover:bg-white/10">Reservar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- TODO TU HTML VA AQUÍ -->
+  <!-- ... Desde el <section class="relative"> del Hero ... -->
+  <!-- ... Hasta el </footer> ... -->
   
   <!-- Enlazamos nuestro script justo antes de cerrar el body -->
+  <script src="script.js"></script>
 </body>
-
 </html>
