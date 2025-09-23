@@ -16,4 +16,4 @@ Esta es una página web de demostración para un restaurante ficticio de comida 
 - Tailwind CSS (vía CDN)
 - JavaScript puro (vanilla JS)
 
-**[Ver la página en vivo](https://TU_USUARIO.github.io/NOMBRE_DEL_REPOSITORIO/)**
+**[Ver la página en vivo](https://YODARKA.github.io/Demostracion/)**
